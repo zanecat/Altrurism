@@ -2,7 +2,7 @@
  * Created by Zane on 16/4/1.
  */
 public class Patch {
-    public static enum COLOR {Green, Pink, Black}
+    public enum COLOR {Green, Pink, Black}
     private float altruism_benefit ;
     private float fitness;
     private float self_weight;
@@ -100,7 +100,18 @@ public class Patch {
         this.benefit_out  = (color == COLOR.Pink);
     }
 
-    public boolean isBenefit_out() {
-        return benefit_out;
+    public int getBenefit_out() {
+        return benefit_out ? 1 : 0;
+    }
+
+    public char getRole(){
+        switch (this.color){
+            case Green:
+                return 'S';
+            case Pink:
+                return 'A';
+            default:
+                return '_';
+        }
     }
 }
