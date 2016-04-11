@@ -3,7 +3,7 @@
  */
 public class Test {
     public static void main(String[] args) {
-        Model m = new Model(0.3f, 0.3f, 0.1f, 0.5f, 0, 0);
+        Model m = new Model(0.26f, 0.26f, 0.13f, 0.88f, 0.0f, 0.0f);
         m.setup();
         m.go();
         System.out.println("test done.");
